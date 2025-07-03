@@ -9,9 +9,6 @@
 # TCE-RJ & Querido Diário
 O objetivo geral deste projeto é criar uma interface gráfica funcional que integre spiders do projeto Querido Diário com um sistema local de resumo textual. Como objetivos específicos, destacam-se: (1) permitir a execução de raspadores Scrapy por meio de interface intuitiva; (2) extrair o conteúdo textual de PDFs gerados; e (3) aplicar uma IA local para resumir automaticamente os documentos.  
 
-
-Conheça mais sobre as [tecnologias](https://queridodiario.ok.org.br/tecnologia) e a [história](https://queridodiario.ok.org.br/sobre) do projeto no [site do Querido Diário](https://queridodiario.ok.org.br)
-
 # Sumário
 - [Ambiente de desenvolvimento](#ambiente-de-desenvolvimento)
 - [Template para raspadores](#template-para-raspadores)
