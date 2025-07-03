@@ -7,7 +7,9 @@
 </p>
 
 # TCE-RJ & Querido Diário
-Este Projeto apresenta uma prova de conceito desenvolvida durante estágio no Tribunal de Contas do Estado do Rio de Janeiro (TCE-RJ)
+
+Este Projeto apresenta uma prova de conceito desenvolvida durante estágio no Tribunal de Contas do Estado do Rio de Janeiro (TCE-RJ).
+
 O objetivo geral deste projeto é criar uma interface gráfica funcional que integre spiders do projeto Querido Diário com um sistema local de resumo textual. Como objetivos específicos, destacam-se: (1) permitir a execução de raspadores Scrapy por meio de interface intuitiva; (2) extrair o conteúdo textual de PDFs gerados; e (3) aplicar uma IA local para resumir automaticamente os documentos.  
 
 # Sumário
