@@ -77,14 +77,14 @@ cd data_collection
 ```console
 scrapy list
 ```
-4. Execute um raspador da lista:
+4. Execute:
 ```console
 python interface_scrapy.py
 ```
 5. Os diários coletados na raspagem serão salvos no diretório `data_collection/data`
     <img alt="raspador" src="./images/raspador.png">
 
-6.4. Execute o resumo com AI:
+6. Execute o resumo com AI:
 ```console
 python interface_resumo.py 
 ```
