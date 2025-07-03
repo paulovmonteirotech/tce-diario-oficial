@@ -105,6 +105,7 @@ python interface_scrapy.py
 6.4. Execute o resumo com AI:
 ```console
 python interface_resumo.py 
+```
 
 
 # Agradecimentos
