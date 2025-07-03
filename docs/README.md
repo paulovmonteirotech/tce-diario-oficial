@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://queridodiario.ok.org.br/sobre" target="_blank"> <img alt="Querido Diário" src="./images/querido-diario-logo.png" width="200">
- <a href="https://www.tcerj.tc.br/portalnovo/" target="_blank"> <img alt="Querido Diário" src="./images/tcerj.jpeg.png">
+ <a href="https://www.tcerj.tc.br/portalnovo/" target="_blank"> <img alt="tcerj" src="./images/tcerj.jpeg">
   </a>
 </p>
 
