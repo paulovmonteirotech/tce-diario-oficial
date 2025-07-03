@@ -60,11 +60,21 @@ cd data_collection
 ```console
 scrapy list
 ```
-4. Run a listed scraper:
+4. Run:
 ```console
-scrapy crawl <scraper_name> //example: scrapy crawl ba_acajutiba
+python interface_scrapy.py
 ```
-5. The official gazettes collected from scraping will be saved in the `data_collection/data` folder
+5. The scraped diaries will be saved in the directory `data_collection/data`
+    <img alt="raspador" src="./images/raspador.png">
+
+6. Run the summary with AI:
+```console
+python interface_resumo.py 
+```
+<img alt="resumo" src="./images/resumo.png">
+<img alt="resumo2" src="./images/resumo2.png">
+
+
 
 6. When executing item 4, the scraper will collect all official gazettes from the publishing site of that municipality since the first digital edition. For smaller runs, use flags in the run command:
 
