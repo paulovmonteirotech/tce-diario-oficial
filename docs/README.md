@@ -84,12 +84,14 @@ scrapy list
 python interface_scrapy.py
 ```
 5. Os diários coletados na raspagem serão salvos no diretório `data_collection/data`
+    <img alt="raspador" src="./images/raspador.png">
 
 6.4. Execute o resumo com AI:
 ```console
 python interface_resumo.py 
 ```
-
+<img alt="resumo" src="./images/resumo.png">
+<img alt="resumo2" src="./images/resumo2.png">
 
 # Agradecimentos
 O Querido Diário é mantido pela Open Knowledge Brasil e possível graças às comunidades técnicas, às [Embaixadoras de Inovação Cívica](https://embaixadoras.ok.org.br/), às pessoas voluntárias e doadoras financeiras, além de universidades parceiras, empresas apoiadoras e financiadoras.
