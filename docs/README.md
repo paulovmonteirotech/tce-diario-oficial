@@ -7,7 +7,8 @@
 </p>
 
 # TCE-RJ & Querido Diário
-Dentro do [ecossistema do Querido Diário](https://docs.queridodiario.ok.org.br/pt-br/latest/contribuindo/guia-de-contribuicao.html#ecossistema-do-querido-diario), este repositório é o responsável pela tarefa de **raspagem dos sites publicadores de diários oficiais**.
+O objetivo geral deste projeto é criar uma interface gráfica funcional que integre spiders do projeto Querido Diário com um sistema local de resumo textual. Como objetivos específicos, destacam-se: (1) permitir a execução de raspadores Scrapy por meio de interface intuitiva; (2) extrair o conteúdo textual de PDFs gerados; e (3) aplicar uma IA local para resumir automaticamente os documentos.  
+
 
 Conheça mais sobre as [tecnologias](https://queridodiario.ok.org.br/tecnologia) e a [história](https://queridodiario.ok.org.br/sobre) do projeto no [site do Querido Diário](https://queridodiario.ok.org.br)
 
@@ -47,6 +48,21 @@ source .venv/bin/activate
 pip install -r data_collection/requirements-dev.txt
 pre-commit install
 ```
+1. Instalar llama-cpp-python:
+``` console
+pip install llama-cpp-python
+```
+Se quiser que a execução seja mais rápida com suporte a CPU otimizada:
+```console
+CMAKE_ARGS="-DLLAMA_BLAS=ON -DLLAMA_BLAS_VENDOR=OpenBLAS" pip install llama-cpp-python --force-reinstall --no-cache-dir
+```
+2. Escolher e baixar um modelo .gguf
+Sugestão leve e eficiente: [Mistral 7B Instruct GGUF (Q4_K_M)]
+```console
+mkdir -p ~/modelos-llm && cd ~/modelos-llm
+wget https://huggingface.co/TheBloke/Mistral-7B-Instruct-v0.1-GGUF/resolve/main/mistral-7b-instruct-v0.1.Q4_K_M.gguf -O mistral.gguf
+```
+AJUSTE O CAMINHO PRO MODELO NA VARIÁVEL MODEL_PATH NO ARQUIVO interface_resumo.py
 
 > A configuração em outros sistemas operacionais está disponível em ["como configurar o ambiente de desenvolvimento"](/docs/CONTRIBUTING.md#como-configurar-o-ambiente-de-desenvolvimento), incluindo mais detalhes para quem deseja contribuir com o desenvolvimento do repositório.
 
@@ -82,53 +98,17 @@ scrapy list
 ```
 4. Execute um raspador da lista:
 ```console
-scrapy crawl <nome_do_raspador>       //exemplo: scrapy crawl ba_acajutiba
+python interface_scrapy.py
 ```
 5. Os diários coletados na raspagem serão salvos no diretório `data_collection/data`
 
-## Dicas de execução
-Além dos comandos acima, o Scrapy oferece outros recursos para configurar o comando de raspagem. Os recursos a seguir podem ser usados sozinhos ou combinados.  
-
-* **Limite de data**  
-Ao executar o item 4, o raspador coletará todos os diários oficiais do site publicador daquele município. Para execuções menores, utilize a flag de atributo `-a` seguida de:
-
-`start=AAAA-MM-DD`: definirá a data inicial de coleta de diários.
+6.4. Execute o resumo com AI:
 ```console
-scrapy crawl <nome_do_raspador> -a start=<AAAA-MM-DD>
-```
-`end=AAAA-MM-DD`: definirá a data final de coleta de diários. Caso omitido, assumirá a data do dia em que está sendo executado.
-```console
-scrapy crawl <nome_do_raspador> -a end=<AAAA-MM-DD>
-```
+python interface_resumo.py 
 
-* **Arquivo de log**   
-É possível enviar o log da raspagem para um arquivo ao invés de deixá-lo no terminal. Isto é particularmente útil quando se desenvolve um raspador que apresenta problemas e você quer enviar o arquivo de log no seu PR para obter ajuda. Para isso, use a flag de configuração `-s` seguida de:
-
-`LOG_FILE=log_<nome_do_municipio>.txt`: definirá o arquivo para armazenar as mensagens de log.
-```console
-scrapy crawl <nome_do_raspador> -s LOG_FILE=log_<nome_do_municipio>.txt
-```
-
-* **Tabela de raspagem**   
-Também é possível construir uma tabela que lista todos os diários e metadados coletados pela raspagem, ficando mais fácil de ver como o raspador está se comportando. Para isso, use a flag de saída `-o` seguida de um nome para o arquivo.
-```console
-scrapy crawl <nome_do_raspador> -o <nome_do_municipio>.csv
-```
-
-# Solução de problemas
-Confira o arquivo de [solução de problemas](/docs/TROUBLESHOOTING.md) para resolver os problemas mais frequentes com a configuração do ambiente do projeto. 
-
-# Suporte 
-<p>  
-  <a href="https://go.ok.org.br/discord" target="_blank">
-    <img alt="Discord Invite" src="https://img.shields.io/badge/Discord-Entre%20no%20servidor-blue?style=for-the-badge&logo=discord" >
-  </a>
-</p>
-
-Ingresse em nosso [canal de comunidade](https://go.ok.org.br/discord) para trocas sobre os projetos, dúvidas, pedidos de ajuda com contribuição e conversar sobre inovação cívica em geral.
 
 # Agradecimentos
-Este projeto é mantido pela Open Knowledge Brasil e possível graças às comunidades técnicas, às [Embaixadoras de Inovação Cívica](https://embaixadoras.ok.org.br/), às pessoas voluntárias e doadoras financeiras, além de universidades parceiras, empresas apoiadoras e financiadoras.
+O Querido Diário é mantido pela Open Knowledge Brasil e possível graças às comunidades técnicas, às [Embaixadoras de Inovação Cívica](https://embaixadoras.ok.org.br/), às pessoas voluntárias e doadoras financeiras, além de universidades parceiras, empresas apoiadoras e financiadoras.
 
 Conheça [quem apoia o Querido Diário](https://queridodiario.ok.org.br/apoie#quem-apoia).
 
