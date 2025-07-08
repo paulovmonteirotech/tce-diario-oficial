@@ -112,9 +112,6 @@ Conheça [quem apoia o Querido Diário](https://queridodiario.ok.org.br/apoie#qu
   </a>
 </p>
 
-A [Open Knowledge Brasil](https://ok.org.br/) é uma organização da sociedade civil sem fins lucrativos, cuja missão é utilizar e desenvolver ferramentas cívicas, projetos, análises de políticas públicas, jornalismo de dados para promover o conhecimento livre nos diversos campos da sociedade. 
-
-Todo o trabalho produzido pela OKBR está disponível livremente.
 
 # Licença
 
