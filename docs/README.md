@@ -17,7 +17,6 @@ O objetivo geral deste projeto é criar uma interface gráfica funcional que int
 - [Template para raspadores](#template-para-raspadores)
 - [Como executar](#como-executar)
 - [Agradecimentos](#agradecimentos)
-- [Open Knowledge Brasil](#open-knowledge-brasil)
 - [Licença](#licença)
 
 # Ambiente de desenvolvimento
