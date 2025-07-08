@@ -96,23 +96,6 @@ O Querido Diário é mantido pela Open Knowledge Brasil e possível graças às 
 
 Conheça [quem apoia o Querido Diário](https://queridodiario.ok.org.br/apoie#quem-apoia).
 
-# Open Knowledge Brasil
-<p>
-  <a href="https://bsky.app/profile/ok.org.br" target="_blank">
-    <img alt="Bluesky Follow" src="https://img.shields.io/badge/Bluesky-_-0285FF?style=for-the-badge&logo=bluesky">
-  </a>
-  <a href="https://www.instagram.com/openknowledgebrasil/" target="_blank">
-    <img alt="Instagram Follow" src="https://img.shields.io/badge/Instagram-_-red?style=for-the-badge&logo=instagram">
-  </a>
-  <a href="https://www.linkedin.com/company/open-knowledge-brasil" target="_blank">
-    <img alt="LinkedIn Follow" src="https://img.shields.io/badge/LinkedIn-_-9cf?style=for-the-badge&logo=linkedin">
-  </a> 
-  <a href="https://mastodon.social/@okbr" target="_blank">
-    <img alt="Mastodon Follow" src="https://img.shields.io/badge/mastodon-_-6364FF?style=for-the-badge&logo=mastodon">
-  </a>
-</p>
-
-
 # Licença
 
 Código licenciado sob a [Licença MIT](LICENSE.md).
